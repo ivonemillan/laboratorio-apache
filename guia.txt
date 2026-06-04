@@ -1,0 +1,105 @@
+Verificar hostname e IP
+
+# hostname
+# hostname -I
+
+Cambiar nombre al host
+
+# hostnamectl set-hostname webserver-manual
+
+Actualizar el sistema
+
+# dnf update -y
+# dnf upgrade -y
+
+
+Apache
+======================================================
+
+Instalar Apache
+
+# dnf install -y httpd 
+# httpd -v
+
+# systemctl enable httpd
+# systemctl start httpd
+# systemctl status httpd
+
+
+Abrir firewall para HTTP
+
+# systemctl status firewalld
+# firewall-cmd --permanent --add-service=http
+# firewall-cmd --reload
+# firewall-cmd --list-services
+
+Test Apache
+
+# curl http://localhost
+
+En navegador abrir
+
+http://192.168.1.xx
+
+
+Personalizar página
+
+# cd /usr/share/httpd/noindex/index.html
+# cp index.html index.html.ori
+# nano index.html
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Server</title>
+</head>
+<body>
+    <h1>Laboratorio Servidor Web</h1>
+    <p class="info">Hostname: <strong>$(hostname)</strong></p>
+    <p class="info">Fecha: <strong>$(date "+%d-%m-%Y %H:%M:%S")</strong></p>
+    <main>
+        <p>Setup manual.</p>
+    </main>
+</body>
+</html>
+
+# chown apache:apache /usr/share/httpd/noindex/index.html
+# chmod 644 /usr/share/httpd/noindex/index.html
+
+Test Apache
+
+# curl http://localhost
+# curl http://127.0.0.1
+
+En navegador abrir
+
+http://192.168.1.xx
+
+
+Crear cuenta en Github
+Crear repo llamado "laboratorio-apache"
+
+Instalar y configurar Git
+
+# dnf install -y git
+# git --version
+# git config user.name "Nombre-hostname"
+# git config user.email "alumno@example.com"
+
+Clonar repositorio
+
+# mkdir -p ~/git-repos/
+# git clone .....
+# cd laboratorio-apache
+# git init
+# cp /var/www/html/index.html .
+# git status
+# git add index.html
+# git status
+# git branch
+# git commit -m "Agregar pagina inicial de Apache"
+# git push
+
+Revisar en github
