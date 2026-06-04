@@ -1,0 +1,2 @@
+Validación de checksum desde CMD de Windows:
+certutil -hashfile Rocky-8.10-x86_64-dvd1.iso SHA256
