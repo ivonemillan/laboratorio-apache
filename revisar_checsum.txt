@@ -1,2 +1,17 @@
-Validación de checksum desde CMD de Windows:
+certutil es una herramienta nativa de windows que verifica la integridad de los archivos
+Validación de checksum desde CMD de Windows con certutil
+Este comando se utiliza para calcular la huella digital (hash) de un archivo y verificar que no este corrupto o haya sido modificado maliciosamente
+
+certutil -hashfile [ruta-del archivo]         [algoritmo]
+
+-en terminal cmd 
+-navegar hasta la carpeta del archivo para no escribir la ruta completa
+ 
 certutil -hashfile Rocky-8.10-x86_64-dvd1.iso SHA256
+
+Comparar el resultado
+-El comando devolvera una cadena de caracteres
+-Compararlo con el hash que proporcione la pagina oficial de donde se descargo el archivo 
+-Si coinciden exactamente 
+-Si cambia aunque sea una letra el archivo no se usa esta corrupto
+
