@@ -1,0 +1,23 @@
+Generar la llave SSH
+En la terminal de Git Bash, copia y pega el siguiente comando (asegúrate de cambiar el correo por el que usas en tu cuenta de GitHub):
+
+Bash
+ssh-keygen -t ed25519 -C "tu_correo@ejemplo.com"
+
+cat ~/.ssh/id_ed25519.pub
+Agregar la llave a GitHub
+Entra a GitHub e inicia sesión.
+
+Haz clic en tu foto de perfil (esquina superior derecha) y ve a Settings (Configuración).
+
+En el menú de la izquierda, busca la sección SSH and GPG keys.
+
+Haz clic en el botón verde New SSH key.
+
+En Title, ponle un nombre que te ayude a recordar qué computadora es (por ejemplo: Mi Laptop Windows).
+
+En Key type, déjalo como Authentication Key.
+
+En el cuadro de texto grande llamado Key, pega lo que copiaste en el Paso 3.
+
+Haz clic en Add SSH key. (Es posible que GitHub te pida confirmar tu contraseña).
