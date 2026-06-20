@@ -1,0 +1,11 @@
+Si trabajo con GitHub, acostúmbrarme a sincronizar mi trabajo constantemente.
+
+git status  Úsarlo antes de hacer un git add para asegurarme de qué está guardando.
+
+Hacer git pull frecuentemente: Si trabajo con más personas (o desde computadoras distintas), descargar siempre los últimos cambios antes de empezar a programar para evitar conflictos difíciles de resolver.
+
+git push al final del día: No dejar mi trabajo solo en tu computadora local. Respaldar mis ramas en GitHub asegura que no perdere progreso si algo le pasa a mi equipo.
+
+
+Crear una rama para cada tarea:  crear una rama desde main.
+ejemplo: git checkout -b 20-06-26.ivone
