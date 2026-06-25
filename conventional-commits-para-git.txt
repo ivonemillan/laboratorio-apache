@@ -12,7 +12,7 @@ tipo(alcance opcional): descripción corta en minúsculas
 
 [Pie de página opcional: notas sobre cambios drásticos o tareas cerradas]
 
-Ejemplos:
+
 feat	    Una nueva funcionalidad para el proyecto (Feature).	                                   feat(auth): agrega login con Google
 fix	        Solución a un error o bug.	                                                           fix(database): corrige error de conexión
 docs	    Cambios exclusivamente en la documentación (README, guías). 	                       docs(readme): actualiza instrucciones de instalación
@@ -20,3 +20,7 @@ style	    Cambios visuales o de formato que no cambian la lógica (espacios, com
 refactor	Código que se reescribe para mejorarlo, pero no añade funciones ni arregla bugs.	   refactor(utils): optimiza el bucle de búsqueda
 test	    Añadir o modificar pruebas del código.	                                               test(api): agrega pruebas para el endpoint de usuarios
 chore	    Tareas de mantenimiento (actualizar dependencias, configurar herramientas).	           chore(deps): actualiza librería de análisis
+
+Ejemplos:
+git commit -m "feat(analytics): agrega script para procesar logs de texto"
+git commit -m "fix(parser): corrige lectura de archivos vacíos" -m "El bucle fallaba con un error de índice cuando el archivo CSV no tenía registros. Se añade una validación previa."
