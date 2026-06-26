@@ -1,0 +1,20 @@
+Si trabajo con GitHub, acostúmbrarme a sincronizar mi trabajo constantemente.
+1.- Asegurarme de estar en la rama principal estable, que usualmente es main
+2.- Hacer un git pull para tener el codigo mas reciente del equipo.
+3.- jamas trabajar sobre main.
+4.- crear una rama nueva especifica para mi tarea git checkout -b nueva-rama
+5- trabajar en nueva-rama hacer  commits especificos cuidando los mensajes tengan sentido propio. Asi cualquier miembro del equipo puede usar git log y entender el historial al instante sin adivinar y cuando todo este listo y probado 
+6- subir mi rama a GitHub con git push 
+7.-abrir un pull request (PR) y que el equipo pueda revisar mi codigo antes de fusionarlo.
+8.- abrir un pull request(PR) de main a prod 
+
+NOTAS
+git status  Úsarlo antes de hacer un git add para asegurarme de qué está guardando.
+
+Hacer git pull frecuentemente: Si trabajo con más personas (o desde computadoras distintas), descargar siempre los últimos cambios antes de empezar a programar para evitar conflictos difíciles de resolver.
+
+git push al final del día: No dejar mi trabajo solo en tu computadora local. Respaldar mis ramas en GitHub asegura que no perdere progreso si algo le pasa a mi equipo.
+
+
+Crear una rama para cada tarea:  crear una rama desde main.
+ejemplo: git checkout -b 20-06-26.ivone

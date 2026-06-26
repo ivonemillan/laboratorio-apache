@@ -1,0 +1,26 @@
+¿Por qué se usa?
+Conventional Commits resuelve esto creando un lenguaje universal. Al usarlo, logras:
+
+Saber qué pasó de un vistazo: Solo con leer la primera palabra sabes si el commit añade código, arregla un fallo o es solo documentación.
+
+Automatización: Existen herramientas que leen estos commits y crean automáticamente el historial de cambios del software (los famosos Changelogs) o deciden si se debe lanzar una nueva versión del proyecto.
+
+Estructura estandar
+tipo(alcance opcional): descripción corta en minúsculas
+
+[Cuerpo del mensaje opcional: explicación detallada]
+
+[Pie de página opcional: notas sobre cambios drásticos o tareas cerradas]
+
+
+feat	    Una nueva funcionalidad para el proyecto (Feature).	                                   feat(auth): agrega login con Google
+fix	        Solución a un error o bug.	                                                           fix(database): corrige error de conexión
+docs	    Cambios exclusivamente en la documentación (README, guías). 	                       docs(readme): actualiza instrucciones de instalación
+style	    Cambios visuales o de formato que no cambian la lógica (espacios, comas, formato).	   style(main): corrige la indentación del archivo
+refactor	Código que se reescribe para mejorarlo, pero no añade funciones ni arregla bugs.	   refactor(utils): optimiza el bucle de búsqueda
+test	    Añadir o modificar pruebas del código.	                                               test(api): agrega pruebas para el endpoint de usuarios
+chore	    Tareas de mantenimiento (actualizar dependencias, configurar herramientas).	           chore(deps): actualiza librería de análisis
+
+Ejemplos:
+git commit -m "feat(analytics): agrega script para procesar logs de texto"
+git commit -m "fix(parser): corrige lectura de archivos vacíos" -m "El bucle fallaba con un error de índice cuando el archivo CSV no tenía registros. Se añade una validación previa."
